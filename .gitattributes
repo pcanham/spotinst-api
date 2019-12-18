@@ -1,0 +1,86 @@
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+* text=auto
+
+## SOURCE CODE
+# Windows EOL
+*.bat      text eol=crlf
+*.ps1      text eol=crlf
+*.psm1     text eol=crlf
+
+# *nix EOL
+*.sh       text eol=lf
+*.json     text eol=lf
+*.yaml     text eol=lf
+*.yml      text eol=lf
+*.tf       text eol=lf
+*.conf     text eol=lf
+*.service  text eol=lf
+
+## ARCHIVES
+*.7z  binary
+*.gz  binary
+*.jar binary
+*.rar binary
+*.tar binary
+*.zip binary
+
+## EXECUTABLES
+*.exe binary
+
+## DOCKER
+*.dockerignore    text
+Dockerfile        text
+
+# Source files
+# ============
+*.pxd   text
+*.py    text
+*.py3   text
+*.pyw   text
+*.pyx   text
+
+# Binary files
+# ============
+*.db    binary
+*.p     binary
+*.pkl   binary
+*.pyc   binary
+*.pyd   binary
+*.pyo   binary
+
+## GRAPHICS
+*.ai   binary
+*.bmp  binary
+*.eps  binary
+*.gif  binary
+*.ico  binary
+*.jng  binary
+*.jp2  binary
+*.jpg  binary
+*.jpeg binary
+*.jpx  binary
+*.jxr  binary
+*.pdf  binary
+*.png  binary
+*.psb  binary
+*.psd  binary
+*.svg  text
+*.svgz binary
+*.tif  binary
+*.tiff binary
+*.wbmp binary
+*.webp binary
+
+## FONTS
+*.ttf   binary
+*.eot   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+
+**/*.tfvar filter=git-crypt diff=git-crypt
+# Making sure that .gitattributes is never encrypted. DON'T TOUCH THAT LINE AND ONE BELOW
+.gitattributes !filter !diff

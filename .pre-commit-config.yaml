@@ -1,0 +1,11 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.4.0
+  hooks:
+    - id: double-quote-string-fixer
+    - id: trailing-whitespace
+    - id: detect-aws-credentials
+    - id: end-of-file-fixer
+    - id: check-symlinks
+    - id: check-case-conflict
+    - id: detect-private-key

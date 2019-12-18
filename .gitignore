@@ -1,0 +1,18 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars
+
+**/plan/*
+
+# OpenVPN Profiles
+*.ovpn
+
+# EKS Configs
+config-map-aws-auth_*.yaml
+kubeconfig_*
