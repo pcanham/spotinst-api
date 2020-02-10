@@ -30,4 +30,4 @@ if __name__ == '__main__':
   client = SpotinstClient(auth_token=api_token, account_id=api_accountid)
   getaccounts = client.get_accounts()
   for account in getaccounts:
-    print('Account ID: {} Account Name: {}'.format(account['account_id'], account['name']))
+    print('Spotinst Account ID: {} AWS Account ID: {}  Account Name: {}'.format(account['account_id'], account['provider_external_id'],  account['name']))
